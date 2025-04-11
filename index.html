@@ -5,32 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vertiaxis Pvt Ltd</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
   <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <button class="menu-toggle">☰</button>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">🌓</button></li>
+      </ul>
+    </div>
   </nav>
 
-  <header class="hero">
-    <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
+  <header class="hero" data-aos="fade-up">
+    <img src="logo/companyLogo.jpeg" alt="Vertiaxis Logo" class="hero-logo" />
     <h1>Vertiaxis Pvt Ltd</h1>
     <p>Your Partner in HR Resourcing and Consulting Excellence</p>
     <a href="#contact" class="btn">Contact Us</a>
   </header>
 
-  <section class="section" id="about">
+  <section class="section" id="about" data-aos="fade-right">
     <div class="container">
       <h2>About Us</h2>
-      <p>Vertiaxis Pvt Ltd is a dedicated IT company specializing in HR Resourcing and Consulting services. We help organizations find, attract, and retain top-tier talent to accelerate their growth. With industry expertise and a network of professionals, we ensure the best hiring strategies are implemented for success.</p>
+      <p>Vertiaxis Pvt Ltd is a dedicated IT company specializing in HR Resourcing and Consulting services...</p>
     </div>
   </section>
 
-  <section class="section" id="services">
+  <section class="section" id="services" data-aos="fade-left">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-grid">
@@ -48,13 +53,13 @@
         </div>
         <div class="service-box">
           <h3>Client Success</h3>
-          <p>We've successfully delivered resourcing solutions to clients like <strong>Kerol Systems</strong>, driving their hiring success.</p>
+          <p>We've successfully delivered resourcing solutions to clients like <strong>Kerol Systems</strong>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section" id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact Us</h2>
       <form action="https://formspree.io/f/meoavygd" method="POST" class="contact-form">
@@ -76,6 +81,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
