@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+  <nav class="navbar">
+    <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
+    <ul id="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
 
   <header class="hero">
     <h1>Vertiaxis Pvt Ltd</h1>
@@ -71,11 +79,7 @@
     }
     window.onscroll = function() {
       const btn = document.getElementById("topBtn");
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
+      btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
     };
   </script>
 </body>
