@@ -61,9 +61,10 @@ a {
 }
 
 #nav-menu.active {
-  display: flex;
   opacity: 1;
   transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-toggle {
