@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close menu when clicking outside
+  // Close menu when clicking outside the nav or toggle
   document.addEventListener('click', (e) => {
     if (
       navMenu.classList.contains('active') &&
