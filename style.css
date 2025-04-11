@@ -5,58 +5,203 @@
   box-sizing: border-box;
 }
 
-/* Fonts and base settings */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
   background-color: #0a0f1a;
   color: #ffffff;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-  background-color: #0a0f1a;
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #0a0f1a;
   padding: 20px 40px;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
 }
 
-.logo img {
-  height: 60px;
+.navbar img.hero-logo {
+  height: 50px;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
+#nav-menu {
   display: flex;
   gap: 30px;
+  list-style: none;
 }
 
-nav ul li a {
-  text-decoration: none;
+#nav-menu li a {
   color: white;
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
+#nav-menu li a:hover {
   color: #00aaff;
 }
 
-/* Mobile menu */
 .menu-toggle {
   display: none;
-  flex-direction: column;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
   cursor: pointer;
-  gap: 5px;
 }
 
-.menu-toggle span {
-  height: 3px;
-  width: 25
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 140px 10% 100px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  padding: 12px 24px;
+  background-color: #ffce00;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #e6b800;
+}
+
+/* Sections */
+.section {
+  padding: 80px 10%;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.service-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #008ecc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #050810;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Back to Top */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.5rem;
+  padding: 10px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #0a0f1a;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .service-grid {
+    flex-direction: column;
+  }
+}
