@@ -1,43 +1,43 @@
-// Toggle mobile menu
+// Toggle nav menu visibility
 function toggleMenu() {
-  const navMenu = document.getElementById('nav-menu');
-  navMenu.classList.toggle('active');
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('active');
 }
 
-// Close menu on nav link click or outside tap
-document.addEventListener('DOMContentLoaded', () => {
-  const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('#nav-menu a');
-  const menuToggle = document.querySelector('.menu-toggle');
-
-  // Close menu on nav link click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
-
-  // Close menu when clicking outside the nav or toggle
-  document.addEventListener('click', (e) => {
-    if (
-      navMenu.classList.contains('active') &&
-      !navMenu.contains(e.target) &&
-      !menuToggle.contains(e.target)
-    ) {
-      navMenu.classList.remove('active');
+// Close nav menu on link click (for mobile)
+document.querySelectorAll('#nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    const menu = document.getElementById('nav-menu');
+    if (menu.classList.contains('active')) {
+      menu.classList.remove('active');
     }
   });
 });
 
-// Scroll to top
+// Close menu when clicking outside (mobile only)
+document.addEventListener('click', (event) => {
+  const menu = document.getElementById('nav-menu');
+  const toggle = document.querySelector('.menu-toggle');
+
+  if (
+    menu.classList.contains('active') &&
+    !menu.contains(event.target) &&
+    !toggle.contains(event.target)
+  ) {
+    menu.classList.remove('active');
+  }
+});
+
+// Scroll-to-top button logic
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Show/hide scroll-to-top button
 window.onscroll = function () {
-  const btn = document.getElementById("topBtn");
-  btn.style.display =
-    (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-      ? "block" : "none";
+  const btn = document.getElementById('topBtn');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
 };

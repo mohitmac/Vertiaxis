@@ -9,7 +9,7 @@
 <body>
   <nav class="navbar">
     <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
-    <ul id="nav-menu">
+    <ul id="nav-menu" class="nav-menu">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -70,17 +70,6 @@
   </footer>
 
   <button onclick="scrollToTop()" id="topBtn">↑</button>
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('active');
-    }
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.onscroll = function() {
-      const btn = document.getElementById("topBtn");
-      btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
