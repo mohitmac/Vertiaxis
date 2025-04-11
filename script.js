@@ -1,10 +1,9 @@
-// Toggle nav menu visibility
 function toggleMenu() {
   const menu = document.getElementById('nav-menu');
   menu.classList.toggle('active');
 }
 
-// Close nav menu on link click (for mobile)
+// Close menu on nav link click (mobile)
 document.querySelectorAll('#nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     const menu = document.getElementById('nav-menu');
@@ -14,11 +13,10 @@ document.querySelectorAll('#nav-menu a').forEach(link => {
   });
 });
 
-// Close menu when clicking outside (mobile only)
+// Close menu on outside click
 document.addEventListener('click', (event) => {
   const menu = document.getElementById('nav-menu');
   const toggle = document.querySelector('.menu-toggle');
-
   if (
     menu.classList.contains('active') &&
     !menu.contains(event.target) &&
@@ -28,16 +26,16 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// Scroll-to-top button logic
+// Scroll to top button
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 window.onscroll = function () {
-  const btn = document.getElementById('topBtn');
+  const btn = document.getElementById("topBtn");
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    btn.style.display = 'block';
+    btn.style.display = "block";
   } else {
-    btn.style.display = 'none';
+    btn.style.display = "none";
   }
 };
