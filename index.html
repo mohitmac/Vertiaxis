@@ -5,95 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vertiaxis Pvt Ltd</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-container">
-      <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
-      <button class="menu-toggle">☰</button>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="themeToggle">🌓</button></li>
-      </ul>
-    </div>
+    <img src="logo/companyLogo.jpeg" alt="Vertiaxis Logo" class="hero-logo" />
+    <ul id="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </nav>
 
-  <header class="hero" data-aos="fade-in">
-    <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
+  <header class="hero">
     <h1>Vertiaxis Pvt Ltd</h1>
     <p>Connecting Talent. Driving Innovation.</p>
     <a href="#contact" class="btn">Get in Touch</a>
   </header>
 
-  <section class="section" id="about" data-aos="fade-right">
+  <section id="about" class="section">
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Vertiaxis Pvt Ltd is a forward-thinking IT company committed to delivering cutting-edge HR Resourcing and Consulting solutions. We understand that talent is the cornerstone of innovation, and our goal is to empower businesses by connecting them with skilled professionals who not only meet technical requirements but also align with organizational values and culture.
-      </p>
-      <p>
-        With years of industry experience, we bring deep expertise in recruiting for complex roles across technology domains. Our consulting services are designed to streamline recruitment processes, optimize human capital, and support long-term workforce strategies. Whether it's sourcing niche tech talent or enhancing your HR framework, Vertiaxis acts as a strategic partner in achieving operational excellence.
-      </p>
-      <p>
-        Trusted by clients like <strong>Kerol Systems</strong>, we continue to deliver high-impact talent solutions that drive business growth. At Vertiaxis, we don’t just fill roles — we help you build world-class teams.
+        Vertiaxis Pvt Ltd is a forward-thinking IT company specializing in HR Resourcing and Consulting services. Our mission is to connect organizations with top-tier talent while driving digital innovation through tailored solutions. We empower businesses by delivering reliable and scalable IT staffing strategies that enhance team performance and support sustainable growth. Whether you're a startup or an enterprise, our expertise helps you build a workforce equipped to thrive in today's competitive landscape.
       </p>
     </div>
   </section>
 
-  <section class="section" id="services" data-aos="fade-up">
+  <section id="services" class="section">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-grid">
         <div class="service-box">
-          <h3>IT Staff Augmentation</h3>
-          <p>Flexible and scalable staffing solutions to meet your technical requirements quickly and efficiently.</p>
+          <h3>Talent Resourcing</h3>
+          <p>Providing top IT professionals tailored to your company’s culture and technical needs, ensuring you always have the right people on board.</p>
         </div>
         <div class="service-box">
-          <h3>Talent Acquisition</h3>
-          <p>Comprehensive hiring services for startups and enterprises targeting top-tier tech professionals.</p>
+          <h3>Consulting Services</h3>
+          <p>Offering strategic HR and IT consulting to streamline your hiring process and align your workforce strategy with business goals.</p>
         </div>
         <div class="service-box">
-          <h3>HR Consulting</h3>
-          <p>Strategic advisory to optimize HR operations, policies, and workforce engagement.</p>
-        </div>
-        <div class="service-box">
-          <h3>Recruitment Process Outsourcing (RPO)</h3>
-          <p>Outsource your hiring lifecycle to us and focus on your core business with complete peace of mind.</p>
+          <h3>Client Success</h3>
+          <p>We've partnered with companies like Kerol Systems to scale their IT talent and deliver transformative project outcomes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact" data-aos="fade-left">
+  <section id="contact" class="section">
     <div class="container">
       <h2>Contact Us</h2>
       <form class="contact-form" action="https://formspree.io/f/meoavygd" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <p>Email: <a href="mailto:vertiaxis@gmail.com">vertiaxis@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919927571220">+91 99275 71220</a></p>
+      <p>Email: <a href="mailto:vertiaxis@gmail.com">vertiaxis@gmail.com</a> | Phone: +91 99275 71220</p>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Vertiaxis Pvt Ltd. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-      </div>
-    </div>
+    <p>&copy; 2025 Vertiaxis Pvt Ltd. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <button onclick="scrollToTop()" id="topBtn">↑</button>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('active');
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onscroll = function() {
+      const btn = document.getElementById("topBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
