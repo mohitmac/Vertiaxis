@@ -185,3 +185,29 @@ footer {
     display: block;
   }
 }
+
+/* Basic nav styles (mobile toggle) */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #0e1621;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 10px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* When active (shown) */
+#nav-menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+

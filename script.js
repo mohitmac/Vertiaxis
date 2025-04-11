@@ -1,14 +1,19 @@
 // Toggle the navigation menu (for mobile)
 function toggleMenu() {
-  document.getElementById('nav-menu').classList.toggle('active');
+  const navMenu = document.getElementById('nav-menu');
+  navMenu.classList.toggle('active');
 }
 
-// Automatically close the nav menu when a link is clicked
-document.addEventListener('DOMContentLoaded', function () {
+// Auto-close nav on link click (for mobile)
+document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('#nav-menu a');
+  const navMenu = document.getElementById('nav-menu');
+
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.remove('active');
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
     });
   });
 });
@@ -18,7 +23,7 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Show or hide the "scroll to top" button based on scroll position
+// Show/hide scroll-to-top button
 window.onscroll = function () {
   const btn = document.getElementById("topBtn");
   btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
