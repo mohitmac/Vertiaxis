@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vertiaxis Pvt Ltd</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-container">
+      <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
       <button class="menu-toggle">☰</button>
       <ul>
         <li><a href="#about">About</a></li>
@@ -21,67 +21,79 @@
     </div>
   </nav>
 
-  <header class="hero" data-aos="fade-up">
+  <header class="hero" data-aos="fade-in">
     <img src="logo/companyLogo.jpg" alt="Vertiaxis Logo" class="hero-logo" />
     <h1>Vertiaxis Pvt Ltd</h1>
-    <p>Your Partner in HR Resourcing and Consulting Excellence</p>
-    <a href="#contact" class="btn">Contact Us</a>
+    <p>Connecting Talent. Driving Innovation.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
   </header>
 
   <section class="section" id="about" data-aos="fade-right">
     <div class="container">
       <h2>About Us</h2>
-      <p>Vertiaxis Pvt Ltd is a dedicated IT company specializing in HR Resourcing and Consulting services...</p>
+      <p>
+        Vertiaxis Pvt Ltd is a forward-thinking IT company committed to delivering cutting-edge HR Resourcing and Consulting solutions. We understand that talent is the cornerstone of innovation, and our goal is to empower businesses by connecting them with skilled professionals who not only meet technical requirements but also align with organizational values and culture.
+      </p>
+      <p>
+        With years of industry experience, we bring deep expertise in recruiting for complex roles across technology domains. Our consulting services are designed to streamline recruitment processes, optimize human capital, and support long-term workforce strategies. Whether it's sourcing niche tech talent or enhancing your HR framework, Vertiaxis acts as a strategic partner in achieving operational excellence.
+      </p>
+      <p>
+        Trusted by clients like <strong>Kerol Systems</strong>, we continue to deliver high-impact talent solutions that drive business growth. At Vertiaxis, we don’t just fill roles — we help you build world-class teams.
+      </p>
     </div>
   </section>
 
-  <section class="section" id="services" data-aos="fade-left">
+  <section class="section" id="services" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-grid">
         <div class="service-box">
-          <h3>Talent Acquisition</h3>
-          <p>We identify and deliver top talent to fill roles across IT, Engineering, and other technical domains.</p>
+          <h3>IT Staff Augmentation</h3>
+          <p>Flexible and scalable staffing solutions to meet your technical requirements quickly and efficiently.</p>
         </div>
         <div class="service-box">
-          <h3>Staff Augmentation</h3>
-          <p>Scale your team quickly with skilled professionals on a contract or full-time basis.</p>
+          <h3>Talent Acquisition</h3>
+          <p>Comprehensive hiring services for startups and enterprises targeting top-tier tech professionals.</p>
         </div>
         <div class="service-box">
           <h3>HR Consulting</h3>
-          <p>We offer strategic consulting on organizational development, recruitment processes, and HR policy formation.</p>
+          <p>Strategic advisory to optimize HR operations, policies, and workforce engagement.</p>
         </div>
         <div class="service-box">
-          <h3>Client Success</h3>
-          <p>We've successfully delivered resourcing solutions to clients like <strong>Kerol Systems</strong>.</p>
+          <h3>Recruitment Process Outsourcing (RPO)</h3>
+          <p>Outsource your hiring lifecycle to us and focus on your core business with complete peace of mind.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact" data-aos="fade-up">
+  <section class="section" id="contact" data-aos="fade-left">
     <div class="container">
       <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/meoavygd" method="POST" class="contact-form">
+      <form class="contact-form" action="https://formspree.io/f/meoavygd" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <p>Email: <a href="mailto:vertiaxis@gmail.com">vertiaxis@gmail.com</a> | Phone: +91 99275 71220</p>
+      <p>Email: <a href="mailto:vertiaxis@gmail.com">vertiaxis@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919927571220">+91 99275 71220</a></p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Vertiaxis Pvt Ltd. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#">LinkedIn</a> | 
-      <a href="#">Twitter</a> | 
-      <a href="#">Facebook</a>
+    <div class="container">
+      <p>&copy; 2025 Vertiaxis Pvt Ltd. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+      </div>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
