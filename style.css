@@ -182,36 +182,18 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #0a0f1a;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  #nav-menu.active {
-    display: flex;
-  }
-
+@media screen and (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #0a192f; /* deep tech-friendly blue */
+    text-align: center;
   }
 
   .hero p {
-    font-size: 1.1rem;
-  }
-
-  .service-grid {
-    flex-direction: column;
+    font-size: 1rem;
+    text-align: center;
   }
 }
