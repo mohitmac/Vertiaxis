@@ -188,12 +188,34 @@ footer {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #0a192f; /* deep tech-friendly blue */
+    color: #093f8f; /* deep tech-friendly blue */
     text-align: center;
   }
 
   .hero p {
     font-size: 1rem;
     text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #0a0f1a;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+  .service-grid {
+    flex-direction: column;
   }
 }
